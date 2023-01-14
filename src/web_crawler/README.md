@@ -44,9 +44,9 @@ In the root project folder, run `python src/web_crawler/main.py`
 ### MacOS/Linux Users
 
 To install the necessary modules:
-`pip3 install -r requirements.txt`
+`python3 -m pip install -r requirements.txt`
 To run the file:
-In the root project folder, run `./src/web_crawler/main.py`
+In the root project folder, run `python3 ./src/web_crawler/main.py`
 
 ### Exercises
 
