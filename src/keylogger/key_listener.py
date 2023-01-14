@@ -37,7 +37,7 @@ class KeyListener():
             strokes = self.database.query()
             print("Printing keystrokes...")
             for stroke in strokes:
-                print(stroke.key_pressed)
+                print(stroke["key"])
             self.listening = False
 
     '''

@@ -4,8 +4,6 @@ from time import sleep
 from key_listener import KeyListener
 from database import MockDatabaseDAO
 
-SLEEP_TIME_IN_SECONDS = 30
-
 
 '''
     Entry point for key logger program that creates a data base connection and starts the key listener.

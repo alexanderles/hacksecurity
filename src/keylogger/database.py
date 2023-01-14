@@ -1,10 +1,6 @@
 import datetime
 from dataclasses import dataclass
 
-@dataclass
-class Keystroke:
-    key_pressed: any
-    timestamp: str
 
 '''
     Represents a connection to a mock database from which you can read (query) and write to. 
@@ -26,8 +22,11 @@ class MockDatabaseDAO:
     '''
 
     def write(self, key_pressed):
-        k = Keystroke(key_pressed, datetime.datetime)
-        self.keystrokes.append(k)
+        key_dict = {
+            "key": key_pressed,
+            "timestamp": datetime.datetime 
+        }
+        self.keystrokes.append(key_dict)
 
     '''
         Read every entry from the database with no formatting.
