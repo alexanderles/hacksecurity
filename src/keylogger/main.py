@@ -4,7 +4,7 @@ from time import sleep
 from key_listener import KeyListener
 from database import MockDatabaseDAO
 
-SLEEP_TIME_IN_SECONDS = 15
+SLEEP_TIME_IN_SECONDS = 30
 
 
 '''
@@ -15,9 +15,10 @@ SLEEP_TIME_IN_SECONDS = 15
 
 def main():
     database_connection, key_listener = setup()
-    sleep(SLEEP_TIME_IN_SECONDS)
-    key_listener.stop_listening()
-    query_database(database_connection)
+    while(key_listener.listening):
+        continue
+    exit()
+    
 
 
 '''
@@ -28,7 +29,7 @@ def main():
 def setup():
     print("Starting script... ")
     database_connection = MockDatabaseDAO()
-    key_listener = KeyListener()
+    key_listener = KeyListener(database_connection)
     return database_connection, key_listener
 
 
@@ -38,8 +39,9 @@ def setup():
 
 
 def query_database(database_connection):
-    print("Printing keystrokes...")
-    print(database_connection.query())
+    
+    for keystroke in database_connection.keystrokes:
+        print(keystroke.key_pressed)
     # print(database_connection.query_by_date())
 
 
