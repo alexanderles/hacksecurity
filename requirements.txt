@@ -1,0 +1,4 @@
+pynput==1.7.6
+requests==2.22.0
+beautifulsoup4==4.11.1
+passlib==1.7.4
