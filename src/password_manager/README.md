@@ -75,7 +75,7 @@ In the root project folder, run `python src/password_manager/main.py`
 To install the necessary modules:
 `python3 -m pip install -r requirements.txt`
 To run the file:
-In the root project folder, run `./src/password_manager/main.py`
+In the root project folder, run `python3 ./src/password_manager/main.py`
 
 ### Exercises
 - Make the label case-insensitive
