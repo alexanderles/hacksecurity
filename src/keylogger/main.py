@@ -26,8 +26,9 @@ def main():
 
 
 def setup():
+    print("Starting script... ")
     database_connection = MockDatabaseDAO()
-    key_listener = KeyListener(database_connection)
+    key_listener = KeyListener()
     return database_connection, key_listener
 
 
@@ -37,6 +38,7 @@ def setup():
 
 
 def query_database(database_connection):
+    print("Printing keystrokes...")
     print(database_connection.query())
     # print(database_connection.query_by_date())
 

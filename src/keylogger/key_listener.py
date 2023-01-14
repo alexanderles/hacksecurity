@@ -11,8 +11,7 @@ class KeyListener():
         Constructs an instance of this class, taking in a database as a field.
     '''
 
-    def __init__(self, database):
-        self.database = database
+    def __init__(self):
         self.listener = keyboard.Listener(
             on_press=self.on_press, on_release=self.on_release)
         self.listener.start()
@@ -22,10 +21,7 @@ class KeyListener():
     '''
 
     def on_press(self, key):
-        try:
-            self.database.write(key)
-        except AttributeError:
-            pass
+        pass
 
     '''
         Defines the behavior when a key is released. Note: When a key is typed, it is both pressed and released. 

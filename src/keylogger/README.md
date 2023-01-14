@@ -1,6 +1,7 @@
 # Simple Python Key Logger
 
 ## Disclaimer
+
 This source code is for educational purposes only. By participating in this workshop you agree to not use this code, use the ideas learned from this workshop, and extend this code in a malicious manner.
 
 ## What is a key logger?
@@ -41,18 +42,20 @@ In the root project folder, run `./src/keylogger/main.py`
 
 #### Functional Milestones
 
-1. First implement a mock database in mockdatabase.py. A database requires reading and writing is a way of storing information in an encapsulated manner. Consider how you want to store the key presses. 
- 1. Hint: Order is important. 
- 1. Hint: What information do you want to store? 
- 1. Hint: If you want to store more than one piece of information per key press, what data structure would be best? 
-  1. Reasoning: A mock database simulates a real database. A malicious user would be able to track your keystrokes but without a way to view the information, they will not be able to access your keystroke data. A script that uploads the information to a database would be perfect to steal.
-1. Attach the database to the key listener. 
- 1. Hint: This can be done in the constructor. 
-  1. Reasoning: attaching a database object as a instance variable will allow the functions to work with the database.
-1. Implement the key listener on press callback. This callback function describes what you want the listener to do when a key press happens, meaning this function runs when a key is pressed. 
- 1. Hint: we want the listener to upload the information to the database.
-1. Implement the key listener on release callback to stop the listener when the ESC key has been released. This callback function describes what you want the listener to do when a key is released (after pressing). 
- 1. Hint: we want some kind of way to stop the listening like a kill switch while testing
+1. Read main.py
+1. First implement a mock database in mockdatabase.py. A database requires reading and writing is a way of storing information in an encapsulated manner. Consider how you want to store the key presses.
+1. Hint: Order is important and you want to store multiple things, what data structure comes to mind?
+1. Hint: What field do you want this class to have?
+1. Hint: Start with the constructor of the database and have the methods work off the fields defined in the constructor.
+1. Bonus: If you want to store more than one piece of information per key press, what data structure would be best?
+1. Reasoning: A mock database simulates a real database. A malicious user would be able to track your keystrokes but without a way to view the information, they will not be able to access your keystroke data. A script that uploads the information to a database would be perfect to steal.
+1. Attach the database to the key listener.
+1. Hint: This can be done in the Key Listener constructor, what parameter should this class take?
+1. Reasoning: attaching a database object as a field will allow the key listener methods/functions to work with the database.
+1. Implement the key listener on press callback. This callback function describes what you want the listener to do when a key press happens, meaning this function runs when a key is pressed.
+1. Hint: we want the listener to upload the information to the database.
+1. Implement the key listener on release callback to stop the listener when the ESC key has been released. This callback function describes what you want the listener to do when a key is released (after pressing).
+1. Hint: we want some kind of way to stop the listening like a kill switch while testing
 1. Test your code by uncommenting the main function!
 
 #### Bonus Milestones

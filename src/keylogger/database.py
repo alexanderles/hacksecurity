@@ -13,22 +13,21 @@ class MockDatabaseDAO:
     '''
 
     def __init__(self) -> None:
-        self.valid_keys = None
-        self.keystrokes = []
+        pass
 
     '''
         Writes to the database, storing information.
     '''
 
     def write(self, key_pressed):
-        self.keystrokes.append(key_pressed)
+        pass
 
     '''
         Read every entry from the database with no formatting.
     '''
 
     def query(self):
-        return self.keystrokes
+        pass
 
     '''
         Read entries from the database from a certain date.
